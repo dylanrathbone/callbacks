@@ -1,3 +1,8 @@
+/*
+ just some random callback stuff..
+*/
+
+
 const dns = require('dns');
 const crypto = require('crypto');
 const fs = require('fs');
@@ -37,7 +42,7 @@ function encrypt() {
     console.log('Encrypted');
   });
 
-  fs.readFile('/Users/927015/Desktop/largeText.txt', (err, data) => {
+  fs.readFile('./largeText.txt', (err, data) => {
     cipher.write(data.toString('utf8'));
     cipher.end();
     if (err) {
@@ -56,5 +61,3 @@ function myOwnFunctionWithACallback(callback) {
     callback();
   }, 10000);
 }
-
-
